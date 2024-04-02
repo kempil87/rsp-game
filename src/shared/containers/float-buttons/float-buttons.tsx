@@ -8,6 +8,7 @@ export const FloatButtons = () => {
   const { onShow } = useModal();
 
   const handleShowRulesModal = () => onShow(ModalNames.Rules);
+
   const handleChangeView = () =>
     dispatchGameOptions({ type: 'toggle', payload: null });
 

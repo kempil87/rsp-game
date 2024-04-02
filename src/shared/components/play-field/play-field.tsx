@@ -9,7 +9,8 @@ const RULES_IMAGE: Record<string, string> = {
 };
 
 export const PlayField = () => {
-  const { isBonusGame, gameOptions } = useOptions();
+  const { isBonusGame } = useOptions();
+
   return (
     <div className={styles.playField}>
       <div className={styles.playFieldContent}>
@@ -19,12 +20,6 @@ export const PlayField = () => {
           src={RULES_IMAGE[isBonusGame ? 'bonus-game' : 'basic-game']}
           alt='Triangle Background'
         />
-        {gameOptions.map((el) => (
-          <img
-            src={RULES_IMAGE[isBonusGame ? 'bonus-game' : 'basic-game']}
-            alt='Triangle Background'
-          />
-        ))}
       </div>
     </div>
   );
