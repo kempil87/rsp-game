@@ -1,0 +1,36 @@
+header {
+    border: 3px solid wheat;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    margin: 20px auto 0 auto;
+    max-height: 164px;
+}
+
+.scoreWrap {
+    background-color: white;
+    color: #522f87;
+    padding: 20px 33px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.scoreWrap span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.scoreWrap p {
+    color: #522f87;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}

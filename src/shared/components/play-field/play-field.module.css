@@ -1,0 +1,22 @@
+.playField {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.playFieldContent {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.playFieldContent h1 {
+    text-align: center;
+}
+
+
+.playFieldContent img {
+    max-width: 260px;
+    aspect-ratio: 1;
+}
