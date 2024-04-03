@@ -8,7 +8,7 @@ export interface SelectedOptions {
 
 export type SelectedPlayersOptionsAction = ReducerActionUtil<
   OptionIds,
-  'set-player' | 'set-ai'
+  'set-player' | 'set-ai' | 'reset'
 >;
 
 export const selectedPlayerOptionsReducer = (
@@ -21,6 +21,10 @@ export const selectedPlayerOptionsReducer = (
 
   if (action.type === 'set-ai') {
     return { ...state, ai: action.payload };
+  }
+
+  if (action.type === 'reset') {
+    return { player: null, ai: null };
   }
 
   return state;

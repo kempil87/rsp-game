@@ -4,14 +4,35 @@ export const DEFAULT_GAME_OPTIONS: GameOptions = [
   {
     id: 'rock',
     name: 'Rock',
+    priority: {
+      paper: 0,
+      scissors: 1,
+      rock: null,
+      spock: null,
+      lizard: null,
+    },
   },
   {
     id: 'paper',
     name: 'Paper',
+    priority: {
+      scissors: 0,
+      rock: 1,
+      paper: null,
+      spock: null,
+      lizard: null,
+    },
   },
   {
     id: 'scissors',
     name: 'Scissors',
+    priority: {
+      paper: 1,
+      rock: 0,
+      scissors: null,
+      spock: null,
+      lizard: null,
+    },
   },
 ];
 
