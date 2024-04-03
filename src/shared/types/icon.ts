@@ -1,5 +1,13 @@
 export interface SpritesMap {
-  sprite: 'close' | 'lizard' | 'logo' | 'paper' | 'rock' | 'scissors' | 'spock';
+  sprite:
+    | 'close'
+    | 'lizard'
+    | 'logo'
+    | 'paper'
+    | 'rock'
+    | 'scissors'
+    | 'spin'
+    | 'spock';
 }
 export const SPRITES_META: {
   [Key in keyof SpritesMap]: {
@@ -13,7 +21,7 @@ export const SPRITES_META: {
   };
 } = {
   sprite: {
-    filePath: 'sprite.9a8f44f9.svg',
+    filePath: 'sprite.805a1c43.svg',
     items: {
       close: {
         viewBox: '0 0 20 20',
@@ -32,6 +40,9 @@ export const SPRITES_META: {
       },
       scissors: {
         viewBox: '0 0 51 58',
+      },
+      spin: {
+        viewBox: '0 0 24 24',
       },
       spock: {
         viewBox: '0 0 45 59',

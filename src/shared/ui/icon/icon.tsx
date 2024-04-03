@@ -17,8 +17,8 @@ export interface IconProps
 }
 
 export const Icon = forwardRef<SVGSVGElement, IconProps>(
-  ({ name, className, ...props }, ref) => {
-    const { viewBox, filePath, iconName, defaultSize } = getIconMeta(name);
+  ({ className, ...props }, ref) => {
+    const { viewBox, filePath, iconName, defaultSize } = getIconMeta(props);
 
     return (
       <svg

@@ -1,4 +1,4 @@
-import { ReducerActionUtil } from '../../containers/context-provider/context-provider.tsx';
+import { ReducerActionUtil } from '../../../containers/context-provider/context-provider.tsx';
 
 export enum ModalNames {
   Rules = 'Rules',

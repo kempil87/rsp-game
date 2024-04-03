@@ -1,7 +1,7 @@
 import styles from './float-buttons.module.css';
-import { useModal } from '../../hooks/use-modal.ts';
-import { ModalNames } from '../../store/reducers/modal.ts';
-import { useSelector } from '../../hooks/use-selector.ts';
+import { useModal } from '../../shared/hooks/use-modal.ts';
+import { ModalNames } from '../../shared/store/reducers/modal.ts';
+import { useSelector } from '../../shared/hooks/use-selector.ts';
 
 export const FloatButtons = () => {
   const dispatchGameOptions = useSelector((store) => store.dispatchGameOptions);

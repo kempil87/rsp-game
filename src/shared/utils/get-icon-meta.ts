@@ -1,9 +1,11 @@
 import { SPRITES_META, SpritesMap } from '../types/icon.ts';
-import { IconName } from '../ui/icon/icon.tsx';
+import { IconProps } from '../ui/icon/icon.tsx';
 
-export const getIconMeta = <Key extends keyof SpritesMap>(
-  name: IconName<Key>
-) => {
+export const getIconMeta = <Key extends keyof SpritesMap>({
+  name,
+  width,
+  height,
+}: IconProps) => {
   const [spriteName, iconName] = name.split('/') as [Key, SpritesMap[Key]];
 
   const { filePath, items } = SPRITES_META[spriteName];
@@ -12,12 +14,11 @@ export const getIconMeta = <Key extends keyof SpritesMap>(
 
   const defaultSize = { height: 16, width: 16 };
 
-  if (viewBox) {
-    const h = viewBox.split(' ')[3];
-    const w = viewBox.split(' ')[2];
+  const viewBoxArray = viewBox.split(' ');
 
-    defaultSize.height = Number(h);
-    defaultSize.width = Number(w);
+  if (viewBox) {
+    defaultSize.height = Number(height || viewBoxArray[3]);
+    defaultSize.width = Number(width || viewBoxArray[2]);
   }
 
   return {

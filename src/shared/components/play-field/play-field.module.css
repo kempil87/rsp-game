@@ -2,21 +2,71 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 6rem;
 }
 
 .playFieldContent {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+    position: relative;
 }
-
-.playFieldContent h1 {
-    text-align: center;
-}
-
 
 .playFieldContent img {
     max-width: 260px;
     aspect-ratio: 1;
+}
+
+.option {
+    align-items: center;
+    background: #ece9e4;
+    border: 18px solid #4b8bff;
+    border-radius: 50%;
+    display: flex;
+    max-width: 120px;
+    width: 100%;
+    aspect-ratio: 1;
+    justify-content: center;
+    position: absolute;
+    transition: .2s ease-out all;
+}
+
+.option svg path {
+    fill: #3B4262;
+}
+
+.option:hover {
+   max-width: 145px;
+}
+
+.option.rock {
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+}
+
+.option.paper {
+    border-color: red;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.option.scissors {
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-color: #dba748;
+}
+
+.option svg.loading {
+   animation: rotate infinite 1s linear;
+}
+
+.option.loading {
+    border-color: transparent;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
 }

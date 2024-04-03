@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App.tsx';
 import '../public/styles/index.css';
-import { Provider } from './shared/containers/context-provider/context-provider.tsx';
+import { Provider } from './containers/context-provider/context-provider.tsx';
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

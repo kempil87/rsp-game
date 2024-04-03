@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { useOutsideClick } from '../../hooks/use-click-outside.ts';
 import styles from './rules.modal.module.css';
 import { cn } from '../../utils/classnames.ts';
-import { Portal } from '../../containers/portal/portal.tsx';
+import { Portal } from '../../../containers/portal/portal.tsx';
 import bonusRulesImage from '../../../../public/images/image-rules-bonus.svg';
 import rulesImage from '../../../../public/images/image-rules.svg';
 import { useOptions } from '../../hooks/use-options.ts';

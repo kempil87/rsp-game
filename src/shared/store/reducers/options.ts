@@ -1,11 +1,11 @@
-import { ReducerActionUtil } from '../../containers/context-provider/context-provider.tsx';
+import { ReducerActionUtil } from '../../../containers/context-provider/context-provider.tsx';
 import { GameOptions } from '../../types/game-options.ts';
 import {
   BONUS_GAME_OPTIONS,
   DEFAULT_GAME_OPTIONS,
 } from '../../constants/default-options.ts';
 
-type ModalState = GameOptions;
+type GameOptionsState = GameOptions;
 
 export type GameOptionsAction = ReducerActionUtil<
   GameOptions | null,
@@ -13,7 +13,7 @@ export type GameOptionsAction = ReducerActionUtil<
 >;
 
 export const gameOptionsReducer = (
-  state: ModalState,
+  state: GameOptionsState,
   action: GameOptionsAction
 ) => {
   if (action.type === 'toggle') {
